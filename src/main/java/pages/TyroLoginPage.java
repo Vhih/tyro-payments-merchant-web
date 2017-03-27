@@ -17,7 +17,7 @@ public class TyroLoginPage {
     private WebElement passwordField;
 
     @FindBy(id = "submit")
-    private WebElement submitButton;
+    private WebElement loginButton;
 
     private WebDriver driver;
 
@@ -33,7 +33,7 @@ public class TyroLoginPage {
     public TyroHomePage login(String username, String password) {
         usernameField.sendKeys(username);
         passwordField.sendKeys(password);
-        submitButton.click();
+        loginButton.click();
 
         new WebDriverWait(driver, 15).until(ExpectedConditions.presenceOfElementLocated(By.id("navigation-container")));
 
