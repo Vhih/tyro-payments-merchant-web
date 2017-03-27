@@ -1,3 +1,5 @@
+package utils;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -6,6 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class HttpDownloadUtility {
+
     private static final int BUFFER_SIZE = 4096;
 
     /**
@@ -42,11 +45,6 @@ public class HttpDownloadUtility {
                 fileName = fileURL.substring(fileURL.lastIndexOf("/") + 1,
                         fileURL.length());
             }
-
-//                System.out.println("Content-Type = " + contentType);
-//                System.out.println("Content-Disposition = " + disposition);
-//                System.out.println("Content-Length = " + contentLength);
-//                System.out.println("fileName = " + fileName);
 
             // opens input stream from the HTTP connection
             InputStream inputStream = httpConn.getInputStream();

@@ -9,6 +9,8 @@ import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.DefaultTrustManager;
+import utils.HttpDownloadUtility;
 
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.SSLContext;
