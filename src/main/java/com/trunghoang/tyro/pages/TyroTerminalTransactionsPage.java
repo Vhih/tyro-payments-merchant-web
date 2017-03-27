@@ -1,5 +1,6 @@
-package pages;
+package com.trunghoang.tyro.pages;
 
+import com.trunghoang.tyro.utils.HttpDownloadUtility;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
@@ -7,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utils.HttpDownloadUtility;
 
 import java.io.File;
 import java.util.List;

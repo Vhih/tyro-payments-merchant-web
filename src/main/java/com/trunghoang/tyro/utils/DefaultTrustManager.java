@@ -1,4 +1,4 @@
-package utils;
+package com.trunghoang.tyro.utils;
 
 import javax.net.ssl.X509TrustManager;
 import java.security.cert.CertificateException;

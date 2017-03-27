@@ -1,14 +1,14 @@
 import com.machinepublishers.jbrowserdriver.JBrowserDriver;
 import com.machinepublishers.jbrowserdriver.Settings;
 import com.machinepublishers.jbrowserdriver.UserAgent;
+import com.trunghoang.tyro.pages.TyroHomePage;
+import com.trunghoang.tyro.pages.TyroLoginPage;
+import com.trunghoang.tyro.pages.TyroReconciliationReportPage;
+import com.trunghoang.tyro.pages.TyroTerminalTransactionsPage;
+import com.trunghoang.tyro.utils.DefaultTrustManager;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import pages.TyroHomePage;
-import pages.TyroLoginPage;
-import pages.TyroReconciliationReportPage;
-import pages.TyroTerminalTransactionsPage;
-import utils.DefaultTrustManager;
 
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.SSLContext;

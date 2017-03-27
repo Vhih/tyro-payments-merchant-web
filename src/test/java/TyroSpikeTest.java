@@ -2,6 +2,8 @@ import com.google.common.base.Function;
 import com.machinepublishers.jbrowserdriver.JBrowserDriver;
 import com.machinepublishers.jbrowserdriver.Settings;
 import com.machinepublishers.jbrowserdriver.UserAgent;
+import com.trunghoang.tyro.utils.DefaultTrustManager;
+import com.trunghoang.tyro.utils.HttpDownloadUtility;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -9,8 +11,6 @@ import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.DefaultTrustManager;
-import utils.HttpDownloadUtility;
 
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.SSLContext;

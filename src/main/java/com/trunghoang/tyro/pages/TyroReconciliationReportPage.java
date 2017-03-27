@@ -1,4 +1,4 @@
-package pages;
+package com.trunghoang.tyro.pages;
 
 import com.google.common.base.Function;
 import org.openqa.selenium.By;

@@ -1,4 +1,4 @@
-package utils;
+package com.trunghoang.tyro.utils;
 
 import java.io.File;
 import java.io.FileOutputStream;
