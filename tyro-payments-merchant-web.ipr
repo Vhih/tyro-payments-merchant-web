@@ -34,13 +34,16 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tyro-web.iml" filepath="$PROJECT_DIR$/.idea/modules/tyro-web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tyro-web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tyro-web_main.iml" group="tyro-web" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tyro-web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tyro-web_test.iml" group="tyro-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web.iml" filepath="$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web_main.iml" group="tyro-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web_test.iml" group="tyro-web" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="libraryTable">
     <library name="Gradle: cglib:cglib-nodep:2.1_3">
