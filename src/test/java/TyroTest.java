@@ -81,4 +81,24 @@ public class TyroTest {
 
     }
 
+    @Test
+    public void testMultiple() throws Exception {
+
+        TyroLoginPage tyroLoginPage = TyroLoginPage.navigateTo(driver);
+        TyroHomePage tyroHomePage = tyroLoginPage.login(username, password);
+        TyroReconciliationReportPage tyroReconciliationReportPage = tyroHomePage.navigateToReconciliationReport();
+
+        String[] reportDates = new String[]{"27/03/2017", "26/03/2017", "25/03/2017", "24/03/2017", "23/03/2017"};
+
+        for (String reportDate : reportDates) {
+            tyroReconciliationReportPage.clickCreateReport(reportDate);
+
+            String totalSale = tyroReconciliationReportPage.getTotalSale();
+            System.out.println(reportDate + " " + totalSale);
+        }
+
+        tyroReconciliationReportPage.navigateToLogout();
+
+    }
+
 }
