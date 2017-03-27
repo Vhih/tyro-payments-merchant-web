@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web.iml" filepath="$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web_main.iml" group="tyro-payments-merchant-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tyro-payments-merchant-web_test.iml" group="tyro-payments-merchant-web" />
+    </modules>
+  </component>
+</project>
