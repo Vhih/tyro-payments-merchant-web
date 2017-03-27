@@ -7,6 +7,7 @@ import org.junit.Test;
 import pages.TyroHomePage;
 import pages.TyroLoginPage;
 import pages.TyroReconciliationReportPage;
+import pages.TyroTerminalTransactionsPage;
 import utils.DefaultTrustManager;
 
 import javax.net.ssl.KeyManager;
@@ -63,9 +64,20 @@ public class TyroTest {
         TyroReconciliationReportPage tyroReconciliationReportPage = tyroHomePage.navigateToReconciliationReport();
 
         tyroReconciliationReportPage.clickCreateReport("27/03/2017");
-        String totalSale = tyroReconciliationReportPage.getTotalSale();
 
+        String totalSale = tyroReconciliationReportPage.getTotalSale();
         System.out.println("totalSale = " + totalSale);
+
+        String[] terminalNames = tyroReconciliationReportPage.getTerminalNames();
+        for (String terminalName : terminalNames) {
+            TyroTerminalTransactionsPage tyroTerminalTransactionsPage = tyroReconciliationReportPage.getReportAsCsv(terminalName);
+
+            String report = tyroTerminalTransactionsPage.getReportAsCsv();
+            System.out.println(terminalName);
+            System.out.println(report);
+        }
+
+        tyroReconciliationReportPage.navigateToLogout();
 
     }
 

@@ -11,15 +11,7 @@ public class HttpDownloadUtility {
 
     private static final int BUFFER_SIZE = 4096;
 
-    /**
-     * Downloads a file from a URL
-     *
-     * @param fileURL HTTP URL of the file to be downloaded
-     * @param saveDir path of the directory to save the file
-     * @throws IOException
-     */
-    public File downloadFile(String fileURL, String saveDir, String cookie)
-            throws IOException {
+    public File downloadFile(String fileURL, String saveDir, String cookie) throws IOException {
         File file = null;
         URL url = new URL(fileURL);
         HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
@@ -71,4 +63,5 @@ public class HttpDownloadUtility {
 
         return file;
     }
+
 }

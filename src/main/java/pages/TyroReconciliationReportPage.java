@@ -6,7 +6,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TyroReconciliationReportPage {
 
@@ -21,6 +26,9 @@ public class TyroReconciliationReportPage {
 
     @FindBy(id = "transactionReportResults")
     private WebElement reportTable;
+
+    @FindBy(id = "logoutFormSubmit")
+    private WebElement logoutLink;
 
     private WebDriver driver;
 
@@ -45,10 +53,37 @@ public class TyroReconciliationReportPage {
         });
     }
 
+    public TyroLoginPage navigateToLogout() {
+        logoutLink.click();
+        return PageFactory.initElements(driver, TyroLoginPage.class);
+    }
+
     public String getTotalSale() {
         WebElement tableFoot = reportTable.findElement(By.tagName("tfoot"));
         WebElement total = tableFoot.findElement(By.xpath("//td[2]"));
         return total.getText();
+    }
+
+    public String[] getTerminalNames() {
+        List<String> terminalNames = new ArrayList<>();
+        List<WebElement> centerTableData = reportTable.findElements(By.className("centerTableData"));
+        for (WebElement webElement : centerTableData) {
+            terminalNames.add(webElement.getText());
+        }
+        return terminalNames.toArray(new String[terminalNames.size()]);
+    }
+
+    public TyroTerminalTransactionsPage getReportAsCsv(String terminalName) throws Exception {
+        List<WebElement> centerTableData = reportTable.findElements(By.className("centerTableData"));
+        for (WebElement webElement : centerTableData) {
+            if (terminalName.equals(webElement.getText())) {
+                webElement.findElement(By.tagName("a")).click();
+                new WebDriverWait(driver, 15).until(ExpectedConditions.presenceOfElementLocated(By.id("reportTitle")));
+
+                return PageFactory.initElements(driver, TyroTerminalTransactionsPage.class);
+            }
+        }
+        return null;
     }
 
 }
