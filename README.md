@@ -13,7 +13,9 @@ Requires valid authentication credentials to the Tyro Payments Merchant extranet
 
 ## Usage
 
-### Example: Reconciliation report and download CSV 
+Example: Reconciliation report and download CSV 
+
+**Sample code**
 
 ```
         TyroLoginPage tyroLoginPage = TyroLoginPage.navigateTo(driver);
@@ -36,5 +38,18 @@ Requires valid authentication credentials to the Tyro Payments Merchant extranet
 
         tyroReconciliationReportPage.navigateToLogout();
 ```
+
+**Output**
+```
+totalSale = $1,000,000.00
+1 - Terminal ID 1
+27/03/2017-09:00:45,Visa,XXXXXXXXXXXX1234,123194,Purchase,Approved,,$1000.00,,,$70.00,Credit,$0.32,$0.37,,$0.69,more&hellip;
+27/03/2017-15:35:43,Eftpos,XXXXXXXXXXXX5678,123330,Purchase,Approved,,$9990.00,,,$120.00,eftpos no cashout,$0.06,$0.40,,$0.45,more&hellip;
+27/03/2017-20:52:13,Eftpos,XXXXXXXXXXXX0000,123401,Purchase,Approved,,$123123.00,,,$170.00,eftpos no cashout,$0.06,$0.40,,$0.45,more&hellip;
+```
+
+[logo]: one-million.png
+![logo]
+
 
 See tests for further examples.
