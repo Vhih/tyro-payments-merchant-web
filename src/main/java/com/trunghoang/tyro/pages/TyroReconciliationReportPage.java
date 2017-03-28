@@ -67,20 +67,24 @@ public class TyroReconciliationReportPage {
     public String[] getTerminalNames() {
         List<String> terminalNames = new ArrayList<>();
         List<WebElement> centerTableData = reportTable.findElements(By.className("centerTableData"));
-        for (WebElement webElement : centerTableData) {
-            terminalNames.add(webElement.getText());
+        if (centerTableData != null && centerTableData.size() > 0) {
+            for (WebElement webElement : centerTableData) {
+                terminalNames.add(webElement.getText());
+            }
         }
         return terminalNames.toArray(new String[terminalNames.size()]);
     }
 
     public TyroTerminalTransactionsPage getReportAsCsv(String terminalName) throws Exception {
         List<WebElement> centerTableData = reportTable.findElements(By.className("centerTableData"));
-        for (WebElement webElement : centerTableData) {
-            if (terminalName.equals(webElement.getText())) {
-                webElement.findElement(By.tagName("a")).click();
-                new WebDriverWait(driver, 15).until(ExpectedConditions.presenceOfElementLocated(By.id("reportTitle")));
+        if (centerTableData != null && centerTableData.size() > 0) {
+            for (WebElement webElement : centerTableData) {
+                if (terminalName.equals(webElement.getText())) {
+                    webElement.findElement(By.tagName("a")).click();
+                    new WebDriverWait(driver, 15).until(ExpectedConditions.presenceOfElementLocated(By.id("reportTitle")));
 
-                return PageFactory.initElements(driver, TyroTerminalTransactionsPage.class);
+                    return PageFactory.initElements(driver, TyroTerminalTransactionsPage.class);
+                }
             }
         }
         return null;
