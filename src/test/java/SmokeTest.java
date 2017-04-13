@@ -2,7 +2,6 @@ import com.machinepublishers.jbrowserdriver.JBrowserDriver;
 import com.machinepublishers.jbrowserdriver.Settings;
 import com.machinepublishers.jbrowserdriver.UserAgent;
 import com.trunghoang.tyro.pages.TyroLoginPage;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,13 +16,14 @@ public class SmokeTest {
         driver = new JBrowserDriver(Settings.builder()
                 .headless(false)
                 .userAgent(UserAgent.CHROME)
+                .logWire(true)
                 .build());
     }
 
-    @After
-    public void closeDriver() {
-        driver.quit();
-    }
+//    @After
+//    public void closeDriver() {
+//        driver.quit();
+//    }
 
     @Test
     public void test() throws Exception {
