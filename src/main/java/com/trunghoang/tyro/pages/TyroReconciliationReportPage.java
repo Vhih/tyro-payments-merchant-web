@@ -90,4 +90,8 @@ public class TyroReconciliationReportPage {
         return null;
     }
 
+    public String getUrl() {
+        return driver.getCurrentUrl();
+    }
+
 }
